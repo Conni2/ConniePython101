@@ -1,5 +1,9 @@
 #dollar change calculator
-def calculate_change(payment, cost):
+def calculate_change():
+    
+    payment = int(input ("Money Received:"))
+    cost = int(input ("Product Price:"))
+
     change = payment - cost
 
     hundred_count = change // 100 
@@ -22,5 +26,4 @@ def calculate_change(payment, cost):
 
 
 # Test
-calculate_change(300, 100)
-print()
+calculate_change()
