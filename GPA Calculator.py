@@ -1,16 +1,27 @@
-def print_grade(midterm_score, final_score):
-    total = midterm_score + final_score
-    if total >= 90:
-        print("A")
-    elif total >= 80:
-        print("B")
-    elif total >= 70:
-        print("C")
-    elif total >= 60:
-        print("D")
+def score_converter():
+
+    str_gpa = str(input("Please input your GPA:"))
+
+    if str_gpa == "A+":
+        int_gpa = float(4.5)
+    elif str_gpa == "A":
+        int_gpa = float(4)
+    elif str_gpa == "B+":
+        int_gpa = float(3.5)
+    elif str_gpa == "B":
+        int_gpa = float(3.0)
+    elif str_gpa == "C+":
+        int_gpa = float(2.5)
+    elif str_gpa == "C":
+        int_gpa = float(2.0)
+    elif str_gpa == "D+":
+        int_gpa = float(1.5)
+    elif str_gpa == "D":
+        int_gpa = float(1.0)    
     else:
-        print("F")
+        int_gpa = float(0)
+    
+    print(int_gpa)
 
-
-# 테스트
-print_grade(20, 35)
+# Test
+score_converter()
