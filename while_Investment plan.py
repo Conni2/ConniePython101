@@ -1,5 +1,6 @@
 #This is for comparint two different investment type (simple interest/compound interest) with different interest rate to make the best invetstment plan
-#input values are 1) initial capital 2) investment year(From to로 받아도됨 이건 생각 좀 해보기) 3)interest rate
+#input values are 1) initial capital 2) investment year 3)interest rate
+#The difference of interest between two plans are only displayed upto 4 decimal places
 #currency = $
 
 #입력값 받기
@@ -18,5 +19,11 @@ while year < endingyear:
     compound = compound * (1+interestrate_compound)
     year += 1
 
-print(simple)
-print(compound)
+comparison = round(simple - compound, 4)
+if comparison < 0:
+    comparison = abs(comparison)
+    print("Compound interest plan is more profitable than simple interest by ${}.".format(comparison))
+elif comparison == 0:
+    print("Interest from two plans is same")
+else:
+    print("Simple interest plan is more profitable than compound interest plan by ${}.".format(comparison))
