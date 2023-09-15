@@ -1,3 +1,7 @@
+# 2nd project - GPA Converter
+# Description: Convert alphabet scale GPA into 4.5 scale GPA | Purpose: To practice if statements
+# Further improvement: Add while and for statement for receiving values and add to the list
+
 def score_converter(str_gpa):
 
     if str_gpa == "A+":
