@@ -1,4 +1,5 @@
-#Finding factors of the given number and count the numbers of factors
+# 4th Project - Factors
+# Description: Finding & count factors of a given number | Purpose: To practice while & if statment
 
 def factor():
     number = int(input("Finding the factors of:"))
