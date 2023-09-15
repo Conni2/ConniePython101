@@ -1,10 +1,12 @@
-#Using while and if, this will display all positive integers less than or equal to the third input value that are multiples of the first input value but are not multiples of the second input value.
+# 3rd Project - Multiples
+# Description: Various calculator using the multiples | Purpose: To practice while statment
+# Display all positive integers less than or equal to the third input value that are multiples of the first input value but are not multiples of the second input value.
 
 def multiplenotmultiple():
-    
-    first = int(input("Please input the factor of the numbers you are looking for:"))
-    second = int(input("Among these, input the factor of the numbers you want to exclude:"))
-    max = int(input("Please write the maximum number of range you would like to print:"))
+    print ("Finding multiple of A but not B:")
+    first = int(input("A:"))
+    second = int(input("B:"))
+    max = int(input("Maximum value of multiple:"))
     
     i=1
     while i <= max:
@@ -15,13 +17,13 @@ def multiplenotmultiple():
 
 multiplenotmultiple()
 
-#Also using while and if to get total sum of the common multiples of two positive integers in the range that is provided by the user
+#Total sum of the common multiples of two positive integers in the range that is provided by the user
 
 def multiplesum():
-    
-    commonfirst = int(input("Please input the first number for the common multiples:"))
-    commonsecond = int(input("Please input the second number for the common multiples:"))
-    range = int(input("Please input the maximum number in the range of your choice:"))
+    print ("This is to find the common multiples of a and b")
+    commonfirst = int(input("a:"))
+    commonsecond = int(input("b:"))
+    range = int(input("Maximum value of common multiple:"))
 
     n = 1
     total = 0
