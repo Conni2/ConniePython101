@@ -1,5 +1,5 @@
 # 7th Project - Fahrenheit to Celcius
-# Description: Convert Fahrenheit to Celcius | Purpose: Practice list
+# Description: Convert Fahrenheit to Celcius | Purpose: Practice List
 
 fahrenheit = []
 celcius = []
