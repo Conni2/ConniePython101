@@ -1,6 +1,4 @@
-def score_converter():
-
-    str_gpa = str(input("Please input your GPA:"))
+def score_converter(str_gpa):
 
     if str_gpa == "A+":
         int_gpa = float(4.5)
@@ -21,7 +19,22 @@ def score_converter():
     else:
         int_gpa = float(0)
     
-    print(int_gpa)
+    return(int_gpa)
 
-# Test
-score_converter()
+
+gpa_scale = []
+gpa = []
+
+while True:
+    str_gpa = str(input("GPA in Alphabet scale:"))
+    if str_gpa == "DONE":
+        break
+    gpa_scale.append(str_gpa)
+
+print("GPA in Alphabet scale:" + str(gpa_scale))
+
+for i in range(len(gpa_scale)):
+    numbers = score_converter(gpa_scale[i])
+    gpa.append(numbers)
+
+print("GPA in total 4.5 scale:"+ str(gpa))
