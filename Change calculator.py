@@ -1,4 +1,6 @@
-#dollar change calculator
+# 1st project - Change calculator
+# Description: A simple calculator for change calculation | Purpose: Practice after learning "def" and the basics(e.g: format, built-in modules) of python
+
 def calculate_change():
     
     payment = int(input ("Money Received:"))
