@@ -1,7 +1,7 @@
 # 10th Project - Pythagorean theorem
 # Purpose: Practicing for statement
 # TIL: If we know about c using a and b, it's better not to use the for statement for code simplification
-# TIL: isinstance() varifies if the data type is integer or not (Boolean)
+# TIL: datatype - Tuple
 
 for a in range(1, 1000):
     for b in range(1, 1000):
@@ -12,10 +12,11 @@ for a in range(1, 1000):
 
 sides_right_triangle = []
 
-for x in range (1, 1000):
-    for y in range (1, 1000):
-         z = (x ** 2 + y ** 2) ** 1/2
-         if isinstance (z, int) == True:
-             sides_right_triangle.append(z)
+for x in range(1,100):
+    for y in range(x,100):
+        for z in range(y,100): 
+            if x**2 + y**2 == z**2:
+                sides_right_triangle.append((x,y,z))
+                print(type((x,y,z)))
 
 print(sides_right_triangle)
