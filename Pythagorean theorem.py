@@ -17,6 +17,5 @@ for x in range(1,100):
         for z in range(y,100): 
             if x**2 + y**2 == z**2:
                 sides_right_triangle.append((x,y,z))
-                print(type((x,y,z)))
 
 print(sides_right_triangle)
