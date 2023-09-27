@@ -14,3 +14,6 @@ def number_masking (number):
     return masked_number
 
 print(number_masking ("980505-1234567"))
+
+#TIL: can also change str to list as below:
+#(line 6~8): str_to_list = ****list(number)**** (But this will put number/alphabet/symbol one by one in the list as an individual element)
