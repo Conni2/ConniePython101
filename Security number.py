@@ -28,3 +28,10 @@ def number_masking2 (number2):
     return ''.join(strtolist)
 
 print(number_masking2("980505-1234567"))
+
+#TIL: Can also use str indexing
+
+def number_masking3 (number3):
+    return number3[:-4] + "****"
+
+print(number_masking3 ("980505-1234567"))
