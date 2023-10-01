@@ -1,5 +1,6 @@
 # 15th project - Palindrome
 # Purpose: To practice str indexing
+# Challenge: Succeed in Korean but need to fix with alphabet
 
 def palindrome (word):
     reverse = []
