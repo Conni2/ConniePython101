@@ -1,11 +1,11 @@
 # 15th project - Palindrome
 # Purpose: To practice str indexing
-# Improvement needed: Succeeded in Korean but need to change the code in case of English
 
-def palindromekr ():
-    krword = str(input("단어를 입력해주세요:"))
+# First attempt: Thought of '토마토' which is a common palindrome in korean (meaning tomato). Since it consists of three Korean alphabets, I only thought of comparing the alphabet one by one
+def palindrome1 ():
+    tomato = str(input("Please input '토마토':"))
     reverse = []
-    reverse = list(krword)
+    reverse = list(tomato)
     for left in range(len(reverse)//2):
         right = len(reverse)-left-1
         if reverse[left] != reverse[right]:
@@ -13,9 +13,13 @@ def palindromekr ():
         else:
             print (True)
 
-palindromekr()
+palindrome1()
 
-def palindromeeng ():
+# The first code had a problem that if I input more than three vocabs, the code prints the result comparing the alphabets one by one
+
+# Second attempt: Using "join" from the last project, I tried to reverse the vocabulary and then change it into str, and then compare it with the input value to see if it is palindrome
+
+def palindrome ():
     word = str(input("Please input the word:"))
     reversed = []
     reversed = list(word)
@@ -30,4 +34,4 @@ def palindromeeng ():
     else:
         print(False)
 
-palindromeeng ()
+palindrome ()
