@@ -1,8 +1,9 @@
 # 15th project - Palindrome
 # Purpose: To practice str indexing
-# Challenge: Succeed in Korean but need to fix with alphabet
+# Improvement needed: Succeeded in Korean but need to change the code in case of English
 
-def palindrome (word):
+def palindrome ():
+    word = str(input("Please input the word:"))
     reverse = []
     reverse = list(word)
     for left in range(len(reverse)//2):
@@ -11,4 +12,4 @@ def palindrome (word):
             print (False)
         print (True)
 
-palindrome("토마토")
+palindrome()
