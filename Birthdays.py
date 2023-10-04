@@ -3,13 +3,13 @@
 
 import datetime
 
-birthday = {}
+birthdays = {}
 
 while True:
     name = input("Name:")
     if name == "DONE":
         break
-while True:
     birthday = input("Birthday(MM-DD):")
-    if birthday == "Done":
-        break
+    birthdays[name] = birthday
+
+print(birthdays)
