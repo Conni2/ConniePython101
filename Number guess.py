@@ -3,29 +3,41 @@
 # TIL: Random module (import random, random.randint)
 import random
 
-number_guess = random.randint(1, 30)
-number_given = random.randint(1, 30)
-print(number_guess)
-print(number_given)
-plus = print(number_guess + number_given)
-times = print(str(number_guess * number_given)[-1])
-def division(number_guess, number_given):
-    if number_guess > number_given:
-        print(str(number_guess // number_given)[-1])
-    else:
-        print(str(number_given // number_guess)[-1])
+# draw random numbers
+number_A = random.randint(1, 30)
+number_B = random.randint(1, 30)
+print(number_A)
+print(number_B)
 
-division(number_guess, number_given)
-def zero (number_guess, number_given):
+# First hint
+def hint_1(number_A, number_B):
+    if number_A > number_B:
+        print("A is bigger than B")
+    else:
+        print("B is equal or bigger than A")
+hint_1(number_A, number_B)
+
+# Hints will be given according to user's request. Users are allowed to request one value of (sum, unit digit of product, unit digit of quotient, number of 0)
+# First request won't deduct the point
+sum = number_A + number_B
+product = str(number_A * number_B)[-1]
+def quotient_cal(number_A, number_B):
+    if number_A > number_B:
+        return(str(number_A // number_B)[-1])
+    else:
+        return(str(number_B // number_A)[-1])
+quotient = quotient_cal(number_A, number_B)
+def zero (number_A, number_B):
     total_zero = []
     num_zero = 0
     i = 0
-    total_zero = list(str(number_guess)+str(number_given))
+    total_zero = list(str(number_A)+str(number_B))
     while i < len(total_zero):
         if total_zero[i] == 0:
             num_zero += 1
             i += 1
         else:
             i += 1
-    print(num_zero)
-zero(number_guess, number_given)
+    return(num_zero)
+zeros = zero(number_A, number_B)
+
