@@ -3,19 +3,23 @@
 # TIL: Random module (import random, random.randint)
 import random
 
-# draw random numbers
+# Defining variables
 number_A = random.randint(1, 30)
 number_B = random.randint(1, 30)
+num_tries = 4
+tries = 0
+guess_A = 0
+guess_B = 0
+
+print("~Welcome to Guessing game!~\nYou have to find two positive integers between 1 to 30(inclusive). These constants are defined as A and B.")
 
 # First hint
-def hint_1(number_A, number_B):
-    if number_A > number_B:
-        print("A is bigger than B")
-    else:
-        print("B is equal or bigger than A")
-hint_1(number_A, number_B)
+if number_A > number_B:
+    print("A is bigger than B")
+else:
+    print("B is equal or bigger than A")
 
-# Hints: Users are allowed to request one value of (sum, unit digit of product, unit digit of quotient, number of 0)
+# Hints
 sum = number_A + number_B
 product = str(number_A * number_B)[-1]
 def quotient_cal(number_A, number_B):
@@ -38,17 +42,27 @@ def zero (number_A, number_B):
     return(num_zero)
 zeros = zero(number_A, number_B)
 
-#TEST
+#User request test
+def user_request(value):
+    if value == "sum":
+        print(sum)
+    elif value == "product":
+        print(product)
+    elif value == "quotient":
+        print(quotient)
+    elif value == "zeros":
+        print(zeros)
 
-user_request = str(input("Please input your request:"))
+#Guessing starts - first test
 
-if user_request == "plus":
-    print(sum)
-if user_request == "times":
-    print(product)
-if user_request == "division":
-    print(quotient)
-if user_request == "zeros":
-    print(zeros)
+while guess_A != number_A and guess_B != number_B and tries < num_tries:
+    request = str(input("<Attemps left: {}> \nChoose the value you would like to see(sum, (unit digit of)product, quotient, and (the number of)zeros):".format(num_tries - tries)))
+    user_request(request)
+    guess_A = int(input("A:"))
+    guess_B = int(input("B:"))
+    tries += 1
+
+if guess_A == number_A and guess_B == number_B:
+    print("Congraturations! You broke the code!")
 else:
-    user_request = str(input("Please input the right value:")) #그리고 다시 반복 시켜야함
+    print("Game over\n The answer is A:{}  B:{}".format(number_A, number_B))
