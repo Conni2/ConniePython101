@@ -3,12 +3,13 @@
 
 import datetime
 
-with open('Birthdays/Friends_bday.txt', 'a') as f:
-    while True:
-        name = input("Name:")
-        if name == "DONE":
-            break
-    while True:
-        birthday = 
+birthday = {}
 
-    f.write('{}: {}'.format(name, date))
+while True:
+    name = input("Name:")
+    if name == "DONE":
+        break
+while True:
+    birthday = input("Birthday(MM-DD):")
+    if birthday == "Done":
+        break
