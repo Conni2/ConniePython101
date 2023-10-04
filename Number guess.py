@@ -1,6 +1,6 @@
 # 16th Project: Number guess
 # Description: Number guess game. The user need to Purpose: Draw the number using random module and compare with the input value
-# TIL: Random module (import random, random.randint)
+# TIL: Random module (import random, random.randint) / Can have multiple conditions for while statement / white space (for enter): \n
 import random
 
 # Defining variables
@@ -11,7 +11,7 @@ tries = 0
 guess_A = 0
 guess_B = 0
 
-print("~Welcome to Guessing game!~\nYou have to find two positive integers between 1 to 30(inclusive). These constants are defined as A and B.")
+print("~Welcome to Guessing game!~\nYou have to find two positive integers between 1 to 30(inclusive). To get higher score, you have to find the numbers with small hints. These constants are defined as A and B.")
 
 # First hint
 if number_A > number_B:
@@ -19,14 +19,14 @@ if number_A > number_B:
 else:
     print("B is equal or bigger than A")
 
-# Hints
+# Formulas for user requests
 sum = number_A + number_B
 product = str(number_A * number_B)[-1]
 def quotient_cal(number_A, number_B):
     if number_A > number_B:
-        return(str(number_A // number_B)[-1])
+        return(str(number_A // number_B))
     else:
-        return(str(number_B // number_A)[-1])
+        return(str(number_B // number_A))
 quotient = quotient_cal(number_A, number_B)
 def zero (number_A, number_B):
     total_zero = []
@@ -42,7 +42,7 @@ def zero (number_A, number_B):
     return(num_zero)
 zeros = zero(number_A, number_B)
 
-#User request test
+# User request processing
 def user_request(value):
     if value == "sum":
         print(sum)
@@ -53,8 +53,7 @@ def user_request(value):
     elif value == "zeros":
         print(zeros)
 
-#Guessing starts - first test
-
+# Guessing game starts
 while guess_A != number_A and guess_B != number_B and tries < num_tries:
     request = str(input("<Attemps left: {}> \nChoose the value you would like to see(sum, (unit digit of)product, quotient, and (the number of)zeros):".format(num_tries - tries)))
     user_request(request)
@@ -63,6 +62,6 @@ while guess_A != number_A and guess_B != number_B and tries < num_tries:
     tries += 1
 
 if guess_A == number_A and guess_B == number_B:
-    print("Congraturations! You broke the code!")
+    print("Congraturations! You broke the code! \nScore: {}".format((num_tries-tries)*10))
 else:
     print("Game over\n The answer is A:{}  B:{}".format(number_A, number_B))
