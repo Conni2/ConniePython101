@@ -1,5 +1,6 @@
 # 17th Project: File creation
 # Purpose: Practice creating files
+# TIL: for creating new txt file -> 'w' / for existing txt file -> 'a'   ||   f.write
 
 with open('Average_income/October_profit.txt', 'w') as f:
     day = 1
