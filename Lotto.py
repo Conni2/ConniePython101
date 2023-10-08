@@ -2,6 +2,7 @@
 
 import random
 
+#Generating numbers
 def generate_numbers(n):
     draw_time = 0
     draw_list = []
@@ -10,6 +11,7 @@ def generate_numbers(n):
         if num not in draw_list:
             draw_list.append(num)
             draw_time += 1
-    print (draw_list)
+    return (draw_list)
 
-generate_numbers(5)
+#test
+print(generate_numbers(5))
