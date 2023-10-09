@@ -3,6 +3,7 @@
 import random
 
 #Generating numbers
+#TIL: if ~ not in ~
 def generate_numbers(n):
     draw_time = 0
     draw_list = []
@@ -13,5 +14,12 @@ def generate_numbers(n):
             draw_time += 1
     return (draw_list)
 
-#test
-print(generate_numbers(5))
+#test print(generate_numbers(5))
+
+#Draw the winning numbers
+#TIL: sorted(list) // list slicing (need more practice)
+def draw_winning_numbers():
+    winning_numbers = generate_numbers(7)
+    return(sorted(winning_numbers[:6]) + winning_numbers [6:])
+
+print(draw_winning_numbers())
