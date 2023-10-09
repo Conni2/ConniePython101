@@ -23,3 +23,14 @@ def draw_winning_numbers():
     return(sorted(winning_numbers[:6]) + winning_numbers [6:])
 
 print(draw_winning_numbers())
+
+#Counting matching numbers
+def count_matching_numbers(list_1, list_2):
+    matching_counter = 0
+    for a in range(len(list_1)):
+        if list_1[a] in list_2:
+            matching_counter += 1
+    return(matching_counter)
+
+#test
+print(count_matching_numbers([1,2,3,4,5], [5, 4, 9]))
