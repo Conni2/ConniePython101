@@ -4,12 +4,13 @@ import random
 
 #Generate numbers
 #TIL: Can set the condition with len(list) with while rather than defining new variable (like i)
-def generate_numbers (n):
+def generate_numbers():
     numbers = []
-    while len(numbers) < n:
-        random_num = random.randint(1,45)
+    while len(numbers) < 3:
+        random_num = random.randint(0,9)
         if random_num not in numbers:
             numbers.append(random_num)
     return(numbers)
 
-print(generate_numbers (6))
+#test 
+print(generate_numbers ())
