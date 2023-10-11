@@ -12,5 +12,10 @@ def generate_numbers():
             numbers.append(random_num)
     return(numbers)
 
-#test 
-print(generate_numbers ())
+#test print(generate_numbers ())
+
+#User input receive
+def take_guess():
+    print("Please type your choice of number in order")
+    numbers_user = []
+    num_1 = int(input("Input the first number:"))
