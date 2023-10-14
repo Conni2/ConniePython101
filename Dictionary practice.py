@@ -1,4 +1,4 @@
-# 12th project - Reverse key and value in dictionary
+# 12th project - Dictionary practice
 # Purpose: To practice dictionary with vocabs in 's'en aller' lyrics
 # TIL: Unlike list, dictionary doesn't have the order and key/value can be str
 
