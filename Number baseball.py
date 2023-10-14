@@ -1,4 +1,4 @@
-# 20th Project: Baseball
+# 20th Project: Number baseball
 
 import random 
 
