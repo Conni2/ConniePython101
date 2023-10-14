@@ -8,7 +8,7 @@ This repository is a collection of small Python projects aimed at practising and
 
 ## Projects
 Projects are created in chronological order <br>
-I recommand you to take a look in the projects with 🌟 in particular!
+Below, you'll find a list of projects I highly recommend you check out. Projects with 🌟 showcase the best of my work and learning journey. Feel free to explore them to get a sense of my programming skills and creativity.
 
 | Project number: Name         | Description                                 |
 | ------------------- | ------------------------------------------- |
